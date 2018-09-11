@@ -5,7 +5,8 @@
   "main": "./dist/extendSelectors.js",
   "scripts": {
     "build": "babel ./src --source-maps --out-dir ./dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test":"mocha --require babel-core/register test/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -21,16 +22,18 @@
     "nested"
   ],
   "author": {
-    "name":"Dmitrii Khriashchikov",
-    "email":"dmitrii.khr@gmail.com"
+    "name": "Dmitrii Khriashchikov",
+    "email": "dmitrii.khr@gmail.com"
   },
   "license": "ISC",
   "dependencies": {
     "immutable": "^3.8.2"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "mocha": "^5.2.0"
   }
 }
