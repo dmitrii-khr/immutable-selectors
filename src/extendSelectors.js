@@ -63,7 +63,7 @@ function getSelector(path, gState) {
 }
 
 function extendSelector(sel, pathFromRoot, pathWithParameter = false) {
-  // sel.path = pathFromRoot;
+  sel.path = pathFromRoot;
   if (pathWithParameter) {
     sel.replace = replaceParam.bind(null, pathFromRoot);
   } else {
