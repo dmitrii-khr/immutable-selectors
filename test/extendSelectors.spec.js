@@ -19,6 +19,7 @@ describe('extendSelectors', ()=>{
 
 //test
     it('first level value',()=> {
+
       assert.equal(selectors.foo.id(state), 100500);
       assert.equal(selectors.foo.message(state), 'SomeStringMessage');
     });
@@ -113,7 +114,6 @@ describe('extendSelectors', ()=>{
       var part = selectors.foo(state).asMutable();
       part.setIn(['deep', 'val'], 'fivehundred');
       var newState = selectors.foo.replace(state, part.asImmutable());
-
       assert.equal(newState.getIn(['moduleA','foo', 'deep', 'val']), 'fivehundred');
     });
 
@@ -140,6 +140,7 @@ describe('extendSelectors', ()=>{
     extendSelecors(selectors, ['moduleA']);
 
     it('item property replace',()=> {
+
       var newState = selectors.bar.listItems.caption.replace(state, 'updated-first', '0');
       assert.equal(newState.getIn(['moduleA', 'bar', 'listItems', '0', 'caption']), 'updated-first');
     });
