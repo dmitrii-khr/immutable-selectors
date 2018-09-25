@@ -1,6 +1,6 @@
 {
   "name": "immutable-selectors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts a nested objects tree to tree of selector-functions, which can be used for convenient data access and modifications",
   "main": "./dist/extendSelectors.js",
   "scripts": {
