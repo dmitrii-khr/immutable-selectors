@@ -125,8 +125,8 @@ var newState = selectors.bar.listItems.caption.replace(state, 'updated-first', '
 console.log(newState.getIn(['moduleA', 'bar', 'listItems', '0', 'caption'])); // updated-first
  ```
 
- ## Usage with redux
- One of use-cases is to replace redux reducers with action-creators, which generates new global state.
+## Use with redux
+One of use-cases is to replace redux reducers with action-creators, which generates new global state.
 Example of action-creator:
 ```javascript
 export function showMessage(message) {
@@ -140,15 +140,13 @@ export function showMessage(message) {
  ```
 Root reducer:
 ```javascript
-function setStateReducer(state, action) {
-  if (action.type == '@@INIT') {
-    return Immutable.Map();
-  }
+function setStateReducer(state = initialState, action) {
   if (action.setState) {
     return action.setState;
   } else {
-	//return combinedReducers(state, action) // You can mix this pattern with classical combineReducers - function.
-    console.error('Action has not "setState" property');
+    return state;
+    // return combinedReducers(state, action);  // You can mix this pattern with classical combineReducers - function.
   }
 }
  ```
+[Example](https://github.com/dmitrii-khr/selectorsTreeExample) of using **immutable-selectors** with redux without redusers.
