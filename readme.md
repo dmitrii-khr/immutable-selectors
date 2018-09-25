@@ -152,4 +152,4 @@ function setStateReducer(state = initialState, action) {
   }
 }
  ```
-[Example](https://github.com/dmitrii-khr/selectorsTreeExample) of using **immutable-selectors** with redux without redusers.
+[Example](https://github.com/dmitrii-khr/selectorsTreeExample) of using **immutable-selectors** with redux without reducers.

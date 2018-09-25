@@ -1,12 +1,13 @@
 {
   "name": "immutable-selectors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Converts a nested objects tree to tree of selector-functions, which can be used for convenient data access and modifications",
   "main": "./dist/extendSelectors.js",
   "scripts": {
     "build": "babel ./src --source-maps --out-dir ./dist",
     "prepublish": "npm run build",
-    "test":"mocha --require babel-core/register test/**/*.spec.js"
+    "test": "mocha --require babel-core/register test/**/*.spec.js",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -30,10 +31,12 @@
     "immutable": "^3.8.2"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "mocha": "^5.2.0"
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0"
   }
 }
