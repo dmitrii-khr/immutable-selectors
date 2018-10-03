@@ -1,6 +1,7 @@
 
 # immutable-selectors
 ![travis build status](https://travis-ci.org/dmitrii-khr/immutable-selectors.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/dmitrii-khr/immutable-selectors/badge.svg?branch=master)](https://coveralls.io/github/dmitrii-khr/immutable-selectors?branch=master)
 
 This package is used for comfort reusable access to parts of deep nested immutable structures. It also allows you to make modification of this structures.
 ## Usage
