@@ -1,2 +1,4 @@
 /node_modules
 /dist
+/.coveralls.yml
+/.nyc_output
